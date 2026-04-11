@@ -95,7 +95,7 @@ export function Welcome() {
           <p className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">
             Automated job applications. No more repetitive forms.
             <br className="hidden md:block" />
-            Let Iris Apply handle the grind while you focus on what matters.
+            Let Iris handle the grind while you focus on what matters.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -124,8 +124,8 @@ export function Welcome() {
               Apply smarter, not harder
             </h2>
             <p className="text-gray-500 text-lg max-w-xl mx-auto">
-              Iris Apply removes the friction from job hunting so you can spend
-              your energy on interviews — not paperwork.
+              Iris removes the friction from job hunting so you can spend your
+              energy on interviews — not paperwork.
             </p>
           </div>
 
@@ -295,7 +295,7 @@ export function Welcome() {
                 your job search?
               </h2>
               <p className="text-white/70 text-lg mb-10 max-w-md mx-auto">
-                Join applicants who are landing roles faster with Iris Apply.
+                Join applicants who are landing roles faster with Iris.
               </p>
               <a href={APP_URL}>
                 <Button className="bg-white text-purple-700 hover:bg-purple-50 rounded-full px-10 h-12 text-base font-semibold shadow-xl">
@@ -313,7 +313,7 @@ export function Welcome() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
             <div>
               <span className="text-lg font-bold text-purple-600 tracking-tight block mb-2">
-                Iris Apply
+                Iris
               </span>
               <p className="text-sm text-gray-500 leading-relaxed max-w-xs">
                 Automated job applications so you can focus on the things that
@@ -379,9 +379,7 @@ export function Welcome() {
           </div>
 
           <div className="border-t border-gray-100 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-gray-400">
-            <span>
-              © {new Date().getFullYear()} Iris Apply. All rights reserved.
-            </span>
+            <span>© {new Date().getFullYear()} Iris. All rights reserved.</span>
             <a
               href={APP_URL}
               className="hover:text-purple-600 transition-colors"
