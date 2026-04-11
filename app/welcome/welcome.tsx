@@ -3,7 +3,7 @@ import { MagicCard } from "~/components/ui/magic-card";
 import Dither from "~/components/Dither";
 import { Button } from "~/components/ui/button";
 
-const APP_URL = "https://iris.somtochukwu.com";
+const APP_URL = "https://app.applywithiris.com";
 
 const features = [
   {
@@ -384,7 +384,7 @@ export function Welcome() {
               href={APP_URL}
               className="hover:text-purple-600 transition-colors"
             >
-              iris.somtochukwu.com
+              applywithiris.com
             </a>
           </div>
         </div>
