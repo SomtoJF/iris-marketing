@@ -44,9 +44,11 @@ export function Welcome() {
       {/* ── Navbar ── */}
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <span className="text-xl font-bold text-purple-600 tracking-tight">
-            Iris Apply
-          </span>
+          <img
+            src="/logo-transparent.png"
+            alt="Iris Apply"
+            className="h-14 w-auto"
+          />
           <nav className="hidden md:flex items-center gap-8 text-sm text-gray-600">
             <a
               href="#benefits"
