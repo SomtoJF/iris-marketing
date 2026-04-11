@@ -1,6 +1,6 @@
 import { Cover } from "~/components/ui/cover";
 import { MagicCard } from "~/components/ui/magic-card";
-import Dither from "~/components/ui/dither";
+import Dither from "~/components/Dither";
 import { Button } from "~/components/ui/button";
 
 const APP_URL = "https://iris.somtochukwu.com";
