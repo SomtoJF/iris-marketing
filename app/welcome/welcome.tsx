@@ -1,37 +1,40 @@
 import { Cover } from "~/components/ui/cover";
-import MagicBento from "~/components/ui/magic-bento";
+import { MagicCard } from "~/components/ui/magic-card";
 import Dither from "~/components/ui/dither";
 import { Button } from "~/components/ui/button";
-import type { BentoCardProps } from "~/components/ui/magic-bento";
 
 const APP_URL = "https://iris.somtochukwu.com";
 
-const featureCards: BentoCardProps[] = [
+const features = [
   {
-    color: "#060010",
     label: "Search",
     title: "Job Search",
-    description: "Integrated job discovery — search without leaving the app",
+    description:
+      "Integrated job discovery — find open roles without ever leaving the app.",
   },
   {
-    color: "#060010",
     label: "Apply",
     title: "Custom Jobs",
     description:
-      "Found a role online? Paste the link and Iris will apply on your behalf",
+      "Found a role online? Paste the link and Iris will apply on your behalf.",
   },
   {
-    color: "#060010",
     label: "Letters",
     title: "Cover Letters, handled",
     description:
-      "Personalised cover letters based on your CV and company research",
+      "Personalised cover letters based on your CV and company research.",
   },
   {
-    color: "#060010",
     label: "Track",
     title: "Application Tracker",
-    description: "Real-time status across all your applications",
+    description:
+      "Real-time status across every application — all in one place.",
+  },
+  {
+    label: "Profile",
+    title: "Your profile, once",
+    description:
+      "Fill in your CV and details once. Iris pulls from them for every single application.",
   },
 ];
 
@@ -204,8 +207,8 @@ export function Welcome() {
       </section>
 
       {/* ── Features ── */}
-      <section id="features" className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
+      <section id="features" className="py-24 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Everything you need to land the role
@@ -215,17 +218,56 @@ export function Welcome() {
             </p>
           </div>
 
-          <div className="flex justify-center">
-            <MagicBento
-              cards={featureCards}
-              spotlightRadius={50}
-              glowColor="132, 0, 255"
-              enableStars
-              enableSpotlight
-              enableBorderGlow
-              enableMagnetism
-              clickEffect
-            />
+          <div className="flex flex-col gap-4">
+            {/* Row 1 — 3 cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {features.slice(0, 3).map((f) => (
+                <MagicCard
+                  key={f.title}
+                  className="p-6 h-44 flex flex-col justify-between cursor-default rounded-2xl"
+                  gradientFrom="#9E7AFF"
+                  gradientTo="#7c3aed"
+                  gradientColor="#f3f0ff"
+                >
+                  <span className="text-xs font-semibold text-purple-500 uppercase tracking-widest">
+                    {f.label}
+                  </span>
+                  <div>
+                    <h3 className="text-base font-semibold text-gray-900 mb-1">
+                      {f.title}
+                    </h3>
+                    <p className="text-sm text-gray-500 leading-relaxed">
+                      {f.description}
+                    </p>
+                  </div>
+                </MagicCard>
+              ))}
+            </div>
+
+            {/* Row 2 — 2 cards centered */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:w-2/3 mx-auto">
+              {features.slice(3).map((f) => (
+                <MagicCard
+                  key={f.title}
+                  className="p-6 h-44 flex flex-col justify-between cursor-default rounded-2xl"
+                  gradientFrom="#9E7AFF"
+                  gradientTo="#7c3aed"
+                  gradientColor="#f3f0ff"
+                >
+                  <span className="text-xs font-semibold text-purple-500 uppercase tracking-widest">
+                    {f.label}
+                  </span>
+                  <div>
+                    <h3 className="text-base font-semibold text-gray-900 mb-1">
+                      {f.title}
+                    </h3>
+                    <p className="text-sm text-gray-500 leading-relaxed">
+                      {f.description}
+                    </p>
+                  </div>
+                </MagicCard>
+              ))}
+            </div>
           </div>
         </div>
       </section>
