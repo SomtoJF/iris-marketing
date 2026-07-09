@@ -141,7 +141,7 @@ export function PainSection() {
           <br className="hidden md:block" /> you didn't apply for
         </h2>
         <p className="mx-auto mb-14 max-w-xl text-lg text-ink/55">
-          Boards, spreadsheets, documents, reminders — your search is scattered
+          Boards, spreadsheets, documents, reminders. Your search is scattered
           across tools that don't talk to each other.
         </p>
 
@@ -155,7 +155,7 @@ export function PainSection() {
           Your complete job-search stack
         </h2>
         <p className="mx-auto max-w-xl text-lg text-ink/55">
-          Search, apply, write and track in one place. Fill your profile once —
+          Search, apply, write and track in one place. Fill your profile once.
           Iris handles everything downstream.
         </p>
       </div>

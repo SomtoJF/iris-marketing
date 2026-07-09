@@ -75,7 +75,7 @@ function ApplyVignette() {
 const steps: { title: string; body: string; vignette: ReactNode }[] = [
   {
     title: "Create your account",
-    body: "Sign up in seconds — no CV gymnastics, no setup wizard marathon.",
+    body: "Sign up in seconds. No CV gymnastics, no setup wizard marathon.",
     vignette: <AccountVignette />,
   },
   {

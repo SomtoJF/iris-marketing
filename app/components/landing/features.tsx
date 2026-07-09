@@ -120,7 +120,7 @@ const features: Feature[] = [
     label: "Search",
     title: "Job search, built in",
     description:
-      "Integrated job discovery — find open roles without ever leaving the app.",
+      "Integrated job discovery. Find open roles without ever leaving the app.",
     vignette: <SearchVignette />,
     className: "md:col-span-3",
   },
@@ -128,7 +128,7 @@ const features: Feature[] = [
     label: "Track",
     title: "Application tracker",
     description:
-      "Real-time status across every application — all in one place.",
+      "Real-time status across every application, all in one place.",
     vignette: <TrackerVignette />,
     className: "md:col-span-3",
   },

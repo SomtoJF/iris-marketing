@@ -121,7 +121,7 @@ export function Hero({ appUrl }: { appUrl: string }) {
             className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-xs font-medium text-purple-100 backdrop-blur"
           >
             <span className="size-1.5 animate-pulse rounded-full bg-fuchsia-300" />
-            Automated job applications — now open
+            Automated job applications, now open
           </motion.div>
 
           <motion.h1
@@ -143,7 +143,7 @@ export function Hero({ appUrl }: { appUrl: string }) {
             className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-purple-100/70 md:text-xl"
           >
             Iris searches, fills the forms, writes the cover letters and tracks
-            every application — so your job hunt runs itself.
+            every application, so your job hunt runs itself.
           </motion.p>
 
           <motion.div
