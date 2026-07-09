@@ -24,6 +24,35 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://applywithiris.com/#organization",
+      name: "Iris Apply",
+      url: "https://applywithiris.com",
+      logo: "https://applywithiris.com/logo.png",
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://applywithiris.com/#website",
+      name: "Iris Apply",
+      url: "https://applywithiris.com",
+      publisher: { "@id": "https://applywithiris.com/#organization" },
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "Iris Apply",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web",
+      url: "https://app.applywithiris.com",
+      description:
+        "Iris Apply automates job applications so you can focus on what matters.",
+    },
+  ],
+};
+
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -32,6 +61,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </head>
       <body>
         {children}
