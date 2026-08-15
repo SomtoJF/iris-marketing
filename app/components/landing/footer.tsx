@@ -24,12 +24,12 @@ export function Footer({ appUrl }: { appUrl: string }) {
                 </a>
               </li>
               <li>
-                <a href="#features" className="transition-colors hover:text-purple-700">
+                <a href="/#features" className="transition-colors hover:text-purple-700">
                   Features
                 </a>
               </li>
               <li>
-                <a href="#how-it-works" className="transition-colors hover:text-purple-700">
+                <a href="/#how-it-works" className="transition-colors hover:text-purple-700">
                   How it works
                 </a>
               </li>
@@ -42,13 +42,13 @@ export function Footer({ appUrl }: { appUrl: string }) {
             </p>
             <ul className="space-y-3 text-sm text-ink/60">
               <li>
-                <a href="#" className="transition-colors hover:text-purple-700">
+                <a href="/privacy" className="transition-colors hover:text-purple-700">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="transition-colors hover:text-purple-700">
-                  Terms of Service
+                <a href="/terms" className="transition-colors hover:text-purple-700">
+                  Terms of Use
                 </a>
               </li>
             </ul>
