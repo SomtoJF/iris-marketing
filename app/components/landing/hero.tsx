@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { Button } from "~/components/ui/button";
 import { cn } from "~/lib/utils";
+import { AddToChromeButton } from "./add-to-chrome-button";
 import { HeroMock } from "./hero-mock";
 
 const NOISE_URI =
@@ -106,7 +107,13 @@ function FloatingChip({
   );
 }
 
-export function Hero({ appUrl }: { appUrl: string }) {
+export function Hero({
+  appUrl,
+  extensionUrl,
+}: {
+  appUrl: string;
+  extensionUrl: string;
+}) {
   return (
     <section className="px-3 pt-3 md:px-5 md:pt-5">
       {/* aurora panel */}
@@ -157,14 +164,7 @@ export function Hero({ appUrl }: { appUrl: string }) {
                 Start applying free →
               </Button>
             </a>
-            <a href="#how-it-works">
-              <Button
-                variant="ghost"
-                className="h-12 rounded-full border border-white/25 px-8 text-base font-medium text-white hover:bg-white/10 hover:text-white"
-              >
-                See how it works
-              </Button>
-            </a>
+            <AddToChromeButton href={extensionUrl} appearance="hero" />
           </motion.div>
         </div>
       </div>
