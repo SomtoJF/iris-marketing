@@ -12,7 +12,7 @@ export function Navbar({ appUrl }: { appUrl: string }) {
               className="h-12 w-auto"
             />
           </a>
-          <nav className="hidden md:flex items-center gap-8 text-sm text-ink/60">
+          <nav className="hidden md:flex items-center gap-5 lg:gap-8 text-sm text-ink/60">
             <a href="/#pain" className="hover:text-purple-700 transition-colors">
               Why Iris
             </a>
@@ -27,6 +27,12 @@ export function Navbar({ appUrl }: { appUrl: string }) {
               className="hover:text-purple-700 transition-colors"
             >
               How it works
+            </a>
+            <a
+              href="/#extension"
+              className="hover:text-purple-700 transition-colors"
+            >
+              Chrome extension
             </a>
           </nav>
         </div>

@@ -1,4 +1,10 @@
-export function Footer({ appUrl }: { appUrl: string }) {
+export function Footer({
+  appUrl,
+  extensionUrl,
+}: {
+  appUrl: string;
+  extensionUrl: string;
+}) {
   return (
     <footer className="border-t border-ink/5 py-14">
       <div className="mx-auto max-w-6xl px-6">
@@ -31,6 +37,16 @@ export function Footer({ appUrl }: { appUrl: string }) {
               <li>
                 <a href="/#how-it-works" className="transition-colors hover:text-purple-700">
                   How it works
+                </a>
+              </li>
+              <li>
+                <a
+                  href={extensionUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-purple-700"
+                >
+                  Chrome extension
                 </a>
               </li>
             </ul>

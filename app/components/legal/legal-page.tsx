@@ -3,6 +3,8 @@ import { Footer } from "~/components/landing/footer";
 import { Navbar } from "~/components/landing/navbar";
 
 const APP_URL = "https://app.applywithiris.com";
+const EXTENSION_URL =
+  "https://chromewebstore.google.com/detail/iris/gkafmplebnbdnnbdafgfcnejfmaehhoj?utm_source=marketing";
 
 export function LegalPage({
   title,
@@ -25,7 +27,7 @@ export function LegalPage({
           {children}
         </div>
       </main>
-      <Footer appUrl={APP_URL} />
+      <Footer appUrl={APP_URL} extensionUrl={EXTENSION_URL} />
     </div>
   );
 }
