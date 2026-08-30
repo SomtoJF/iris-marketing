@@ -1,87 +1,34 @@
-# Welcome to React Router!
+# Iris
 
-A modern, production-ready template for building full-stack React applications using React Router.
+The public marketing site for [Iris](https://applywithiris.com) — an automated job-application product that searches, applies, writes, and tracks so a job hunt can run from one place.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+**Live:** [https://applywithiris.com](https://applywithiris.com)
 
-## Features
+The product itself lives at [https://app.applywithiris.com](https://app.applywithiris.com).
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## What it is
 
-## Getting Started
+Iris is a complete job-search stack. You fill in a profile once (CV, work history, preferences). From there Iris finds roles, fills application forms, drafts cover letters, and keeps status in one tracker — instead of bouncing between job boards, spreadsheets, and document folders.
 
-### Installation
+There is also a [Chrome extension](https://chromewebstore.google.com/detail/iris/gkafmplebnbdnnbdafgfcnejfmaehhoj) for when you are already on an application page: it detects fields, drafts answers from your profile, and lets you review before you submit. It never hits send.
 
-Install the dependencies:
+## The problem
 
-```bash
-npm install
-```
+Job hunting is repetitive and scattered. The same name, CV, and work history go into a slightly different form dozens of times a week. Tracking lives in a spreadsheet that goes stale. Every role wants a fresh cover letter. Boards, notes, and documents do not talk to each other, so the search itself becomes a second job.
 
-### Development
+## How it solves it
 
-Start the development server with HMR:
+At a high level, Iris replaces that pile of tools with a single loop:
 
-```bash
-npm run dev
-```
+1. **Create an account** and fill an application profile once. That profile is the source of truth for every application.
+2. **Find work inside Iris** or paste any job URL. Iris fills the forms and writes personalised cover letters from your CV and company context.
+3. **Track everything** in one place — status updates instead of a spreadsheet you have to remember to maintain.
 
-Your application will be available at `http://localhost:5173`.
+The Chrome extension covers the same profile on sites where you want to stay in the browser and submit yourself.
 
-## Building for Production
-
-Create a production build:
+## Local development
 
 ```bash
-npm run build
+pnpm install
+pnpm dev
 ```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
