@@ -105,6 +105,9 @@ importers:
       '@types/three':
         specifier: ^0.183.0
         version: 0.183.1
+      prettier:
+        specifier: 3.9.8
+        version: 3.9.8
       tailwindcss:
         specifier: ^4.2.2
         version: 4.3.3
@@ -2312,8 +2315,8 @@ packages:
     resolution: {integrity: sha512-C+y9x90UElAddDZmV4qOx9W53B61PO7cIqWz2dQsWlwswuq4mr8NEwytdGKboYbQlGZ3awrkTeNvcZiZNHnQ8A==}
     engines: {node: '>=20'}
 
-  prettier@3.9.9:
-    resolution: {integrity: sha512-Z/CJHIkdujO/OtN7nXUii0Rf3VT5SRuhjBA82Xvu2XhBUgX3nhP67T0LHceBdQLex7OOFGTox+Q5Yg8Jk2Qivg==}
+  prettier@3.9.8:
+    resolution: {integrity: sha512-WRFq3Wn3WId7LLROfMLdH7xaFr2jR62wU8nLO6rQUOLOxNZUviyJQs1M0iIhLexSFy+L+w0ch66wtoO2jRjG0A==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -3252,7 +3255,7 @@ snapshots:
       pathe: 1.1.2
       picocolors: 1.1.1
       pkg-types: 2.3.3
-      prettier: 3.9.9
+      prettier: 3.9.8
       react-refresh: 0.14.2
       react-router: 7.14.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       semver: 7.8.5
@@ -4871,7 +4874,7 @@ snapshots:
 
   powershell-utils@0.2.1: {}
 
-  prettier@3.9.9: {}
+  prettier@3.9.8: {}
 
   pretty-ms@9.3.1:
     dependencies:
