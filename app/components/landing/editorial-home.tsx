@@ -461,7 +461,10 @@ function FinalCta() {
           05 / Enough forms
         </p>
         <h2 className="mt-8 max-w-6xl text-[clamp(2.6rem,8vw,7.5rem)] font-black uppercase leading-[1.08] tracking-[-0.025em] [word-spacing:0.06em]">
-          Apply with Iris so you can focus on what really matters.
+          Focus on what really matters <br />{" "}
+          <div className="bg-purple-700 text-white px-2 py-1 w-fit">
+            Apply with Iris
+          </div>
         </h2>
         <div className="mt-12 flex flex-col items-start justify-between gap-8 border-t border-ink pt-7 md:flex-row md:items-center">
           <p className="max-w-md text-sm leading-6 text-ink/55">
