@@ -7,7 +7,7 @@ WORKDIR /app
 RUN pnpm install
 
 FROM base AS production-dependencies-env
-COPY ./package.json pnpm-lock.yaml /app/
+COPY ./package.json pnpm-workspace.yaml* pnpm-lock.yaml /app/
 WORKDIR /app
 RUN pnpm install --prod
 
