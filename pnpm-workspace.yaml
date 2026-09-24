@@ -1,2 +1,5 @@
-# pnpm-workspace.yaml
-minimumReleaseAge: 1440 # 1440 minutes equals 1 day
+ignoredBuiltDependencies:
+  - '@tsparticles/engine'
+  - esbuild
+
+minimumReleaseAge: 1440
