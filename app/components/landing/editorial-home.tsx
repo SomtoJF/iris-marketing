@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { ChromeIcon } from "./chrome-icon";
+import BarWaveAnimation from "../../../components/pixel-perfect/bar-wave-animation";
 
 export const APP_URL = "https://app.applywithiris.com";
 const EXTENSION_URL =
@@ -95,6 +96,12 @@ export function Header() {
           </a>
           <a href="/#extension" className="hover:text-purple-700">
             Extension
+          </a>
+          <a href="/privacy" className="hover:text-purple-700">
+            Privacy
+          </a>
+          <a href="/terms" className="hover:text-purple-700">
+            Terms
           </a>
         </nav>
         <a
@@ -335,13 +342,6 @@ function Process() {
 }
 
 function Receipt() {
-  const rows = [
-    ["Profile", "Matched"],
-    ["Resume", "Attached"],
-    ["Questions", "Completed"],
-    ["Cover letter", "Generated"],
-    ["Tracker", "Updated"],
-  ];
   return (
     <section className="border-b border-ink bg-purple-700 text-white">
       <div className="mx-auto grid max-w-[1440px] md:grid-cols-2">
@@ -351,50 +351,20 @@ function Receipt() {
           </p>
           <div>
             <h2 className="text-[clamp(2.5rem,5.5vw,4.5rem)] font-black uppercase leading-[1.12] tracking-[-0.02em] [word-spacing:0.06em]">
-              You click once.
+              The whole
               <br />
-              Iris keeps count.
+              application process.
+              <br />
+              One place.
             </h2>
             <p className="mt-6 max-w-md text-sm leading-6 text-purple-100/65">
-              Every application lands in the tracker with a visible status, so
-              automation never means losing track of what happened.
+              Iris reads the role, matches your profile, fills the forms, writes
+              the cover letter, and tracks what happened from one place.
             </p>
           </div>
         </div>
-        <div className="flex items-center justify-center bg-[#ece7dc] p-5 py-16 text-ink md:p-12">
-          <div className="w-full max-w-md border border-ink bg-white p-6 shadow-[8px_8px_0_#15131a]">
-            <div className="flex items-start justify-between border-b border-dashed border-ink pb-5">
-              <div>
-                <p className="text-[10px] font-black uppercase tracking-widest text-purple-700">
-                  Application receipt
-                </p>
-                <p className="mt-2 font-mono text-xs text-ink/45">
-                  IRIS / #000842
-                </p>
-              </div>
-              <Mark className="w-10 text-purple-700" />
-            </div>
-            <div className="border-b border-dashed border-ink py-6">
-              <p className="text-2xl font-black uppercase">Product Designer</p>
-              <p className="mt-1 text-sm text-ink/45">
-                Example Company · Remote
-              </p>
-            </div>
-            <dl className="py-4">
-              {rows.map(([label, value]) => (
-                <div
-                  key={label}
-                  className="flex justify-between border-b border-ink/10 py-3 text-xs"
-                >
-                  <dt className="text-ink/45">{label}</dt>
-                  <dd className="font-bold uppercase">{value} ✓</dd>
-                </div>
-              ))}
-            </dl>
-            <div className="mt-4 border-2 border-purple-700 px-3 py-3 text-center text-xl font-black uppercase tracking-[0.18em] text-purple-700">
-              Application filed
-            </div>
-          </div>
+        <div className="flex items-center justify-center bg-[#f3efe6] p-5 py-16 text-ink md:p-12">
+          <BarWaveAnimation />
         </div>
       </div>
     </section>
