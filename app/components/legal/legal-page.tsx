@@ -1,5 +1,5 @@
 import { Children, isValidElement, type ReactNode } from "react";
-import { Footer, Header, Mark } from "~/components/landing/editorial-home";
+import { Footer, Header, Logo } from "~/components/landing/editorial-home";
 
 function sectionId(title: string) {
   return `section-${title.match(/^\d+/)?.[0] ?? title.toLowerCase().replace(/\W+/g, "-")}`;
@@ -28,7 +28,7 @@ export function LegalPage({
         <div className="border-b border-ink bg-purple-700 text-white">
           <div className="mx-auto max-w-[1440px] px-5 pb-14 pt-14 md:px-8 md:pb-20 md:pt-20">
             <div className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.16em] text-purple-200">
-              <Mark className="w-6" /> Iris / The details
+              Iris / The details
             </div>
             <h1 className="mt-8 max-w-5xl text-[clamp(3.3rem,9vw,8rem)] font-black uppercase leading-[1.08] tracking-[-0.025em] [word-spacing:0.06em]">
               {title}

@@ -1,30 +1,19 @@
 import { motion } from "motion/react";
 import { ChromeIcon } from "./chrome-icon";
 import BarWaveAnimation from "../../../components/pixel-perfect/bar-wave-animation";
+import ParticleShapeMorph from "../../../components/pixel-perfect/particle-shape-morph";
 
 export const APP_URL = "https://app.applywithiris.com";
 const EXTENSION_URL =
   "https://chromewebstore.google.com/detail/iris/gkafmplebnbdnnbdafgfcnejfmaehhoj?utm_source=marketing";
 
-export function Mark({ className = "" }: { className?: string }) {
-  const dots = Array.from({ length: 37 });
+export function Logo({ className = "" }: { className?: string }) {
   return (
-    <div
-      className={`grid grid-cols-7 gap-[3px] ${className}`}
-      aria-hidden="true"
-    >
-      {dots.map((_, index) => {
-        const hidden = [
-          0, 1, 5, 6, 7, 13, 21, 27, 28, 29, 33, 34, 35, 36,
-        ].includes(index);
-        return (
-          <span
-            key={index}
-            className={`aspect-square rounded-full bg-current ${hidden ? "opacity-0" : "opacity-100"}`}
-          />
-        );
-      })}
-    </div>
+    <img
+      src="/logo-transparent.png"
+      alt="Iris"
+      className={`h-10 w-fit object-contain ${className}`}
+    />
   );
 }
 
@@ -80,12 +69,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-ink bg-[#f3efe6]/95 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-5 md:px-8">
-        <a
-          href="/#top"
-          className="flex items-center gap-3 font-black tracking-[-0.04em] text-ink"
-        >
-          <Mark className="w-7 text-purple-700" />
-          IRIS
+        <a href="/#top" className="flex items-center text-ink">
+          <Logo className="h-15" />
         </a>
         <nav className="hidden items-center gap-8 text-[11px] font-bold uppercase tracking-[0.12em] md:flex">
           <a href="/#routes" className="hover:text-purple-700">
@@ -123,7 +108,6 @@ function Hero() {
     >
       <div className="mx-auto max-w-[1440px] px-5 pb-12 pt-8 md:px-8 md:pb-16">
         <div className="relative pb-10 pt-4 md:pb-14 md:pt-8">
-          <Mark className="absolute right-0 top-10 hidden w-20 text-purple-700 md:grid" />
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -177,13 +161,12 @@ function Hero() {
           <div className="hidden items-center px-5 text-purple-700 md:flex">
             <Arrow />
           </div>
-          <div className="flex flex-col items-center justify-center border-y border-ink bg-purple-700 p-6 text-center text-white md:border-x md:border-y-0">
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 16, repeat: Infinity, ease: "linear" }}
-            >
-              <Mark className="w-16" />
-            </motion.div>
+          <div className="flex flex-col items-center justify-center border-y border-ink bg-purple-700 p-6 text-center text-white md:border-x md:border-y-0 max-h-48">
+            <ParticleShapeMorph
+              auto
+              showLabels={false}
+              className="size-72 text-purple-100"
+            />
             <p className="mt-4 text-xs font-black uppercase tracking-[0.18em]">
               Iris is working
             </p>
@@ -458,9 +441,8 @@ export function Footer() {
     <footer className="border-t border-white/20 bg-ink text-white">
       <div className="mx-auto max-w-[1440px] px-5 py-10 md:px-8">
         <div className="flex flex-col justify-between gap-8 md:flex-row">
-          <div className="flex items-center gap-3 text-2xl font-black">
-            <Mark className="w-9 text-purple-400" />
-            IRIS
+          <div className="flex items-center">
+            <Logo className="h-10 w-auto brightness-0 invert" />
           </div>
           <div className="flex flex-wrap gap-x-7 gap-y-3 text-xs text-white/55">
             <a href={APP_URL} className="hover:text-white">

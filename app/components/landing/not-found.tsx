@@ -1,4 +1,4 @@
-import { ActionArrow, APP_URL, Footer, Header, Mark } from "./editorial-home";
+import { ActionArrow, APP_URL, Footer, Header, Logo } from "./editorial-home";
 
 export function NotFound() {
   return (
@@ -10,7 +10,7 @@ export function NotFound() {
           <div className="mx-auto w-full max-w-[1440px] px-5 py-14 md:px-8 md:py-20">
             <div className="flex items-center justify-between border-b border-ink pb-4 text-[10px] font-black uppercase tracking-[0.16em] text-purple-700">
               <span>Wrong turn / 404</span>
-              <Mark className="w-8" />
+              <Logo className="h-8 w-auto" />
             </div>
             <div className="relative mt-6 md:grid md:grid-cols-[0.9fr_1.1fr] md:items-center md:gap-10">
               <p aria-hidden="true" className="select-none text-[clamp(9rem,28vw,27rem)] font-black leading-[0.9] tracking-[-0.09em] text-ink md:text-[clamp(10rem,18vw,18rem)]">
