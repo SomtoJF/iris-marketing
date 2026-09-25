@@ -12,7 +12,7 @@ export function Logo({ className = "" }: { className?: string }) {
     <img
       src="/logo-transparent.png"
       alt="Iris"
-      className={`h-10 w-fit object-contain ${className}`}
+      className={`h-10 w-fit object-contain max-w-15 ${className}`}
     />
   );
 }
@@ -69,8 +69,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-ink bg-[#f3efe6]/95 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-5 md:px-8">
-        <a href="/#top" className="flex items-center text-ink">
-          <Logo className="h-15" />
+        <a href="/#top" className="flex items-center text-ink max-w-15">
+          <Logo className="h-15 max-w-15" />
         </a>
         <nav className="hidden items-center gap-8 text-[11px] font-bold uppercase tracking-[0.12em] md:flex">
           <a href="/#routes" className="hover:text-purple-700">
