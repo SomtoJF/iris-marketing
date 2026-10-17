@@ -167,6 +167,7 @@ const RetroEffect = forwardRef<
   const { colorNum, pixelSize } = props;
   const WrappedRetroEffect = wrapEffect(RetroEffectImpl);
   return (
+    // @ts-expect-error wrapEffect typings omit custom effect uniforms.
     <WrappedRetroEffect ref={ref} colorNum={colorNum} pixelSize={pixelSize} />
   );
 });

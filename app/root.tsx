@@ -3,13 +3,13 @@ import {
   isRouteErrorResponse,
   Links,
   Meta,
-  Outlet,
   Scripts,
   ScrollRestoration,
 } from "react-router";
 
 import type { Route } from "./+types/root";
 import { NotFound } from "./components/landing/not-found";
+import { FernoProvider } from "./components/FernoProvider";
 import "./app.css";
 
 export const links: Route.LinksFunction = () => [
@@ -100,7 +100,7 @@ export default function App() {
     };
   }, []);
 
-  return <Outlet />;
+  return <FernoProvider />;
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
