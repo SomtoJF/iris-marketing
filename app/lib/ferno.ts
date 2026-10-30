@@ -2,6 +2,7 @@ type AnalyticsClient = {
   load(settings: unknown, options?: unknown): AnalyticsClient;
   track(name: string, properties?: Record<string, string>): Promise<unknown>;
   page(properties?: Record<string, string>): Promise<unknown>;
+  trackLink(elements: Element[], name: string): Promise<unknown>;
 };
 
 const writeKey = import.meta.env.VITE_FERNO_WRITE_KEY as string | undefined;
@@ -12,6 +13,7 @@ const apiPath =
   (import.meta.env.VITE_FERNO_API_PATH as string | undefined) ?? "/events";
 
 let analyticsPromise: Promise<AnalyticsClient | undefined> | undefined;
+let lastPage: string | undefined;
 
 function loadFerno() {
   if (!writeKey) return Promise.resolve(undefined);
@@ -30,10 +32,7 @@ function loadFerno() {
       {
         initialPageview: false,
         instrumentation: {
-          autocapture: true,
           rageClicks: true,
-          deadClicks: true,
-          navigation: { enabled: true, hash: true },
           exceptions: { enabled: true, console: true },
           heatmaps: { enabled: true, flushInterval: 10000 },
         },
@@ -53,14 +52,24 @@ export function initializeFerno() {
 }
 
 export function trackCanonicalPage(pathname: string) {
+  if (lastPage === pathname) return;
+  lastPage = pathname;
   const canonicalUrl = new URL(pathname, "https://applywithiris.com").toString();
   void loadFerno().then((analytics) =>
     analytics?.page({ canonical_url: canonicalUrl, path: pathname }),
   );
 }
 
-export function trackCtaClick(type: "app" | "extension") {
-  void loadFerno().then((analytics) =>
-    analytics?.track("cta_clicked", { cta: type }),
-  );
+const trackedLinks = new WeakSet<Element>();
+
+export function trackMarketingLinks() {
+  void loadFerno().then((analytics) => {
+    if (!analytics) return;
+    const links = Array.from(document.querySelectorAll("a")).filter((link) => {
+      if (trackedLinks.has(link)) return false;
+      trackedLinks.add(link);
+      return true;
+    });
+    if (links.length) void analytics.trackLink(links, "link_clicked");
+  });
 }

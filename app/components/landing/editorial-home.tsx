@@ -2,7 +2,6 @@ import { motion } from "motion/react";
 import { ChromeIcon } from "./chrome-icon";
 import BarWaveAnimation from "../../../components/pixel-perfect/bar-wave-animation";
 import ParticleShapeMorph from "../../../components/pixel-perfect/particle-shape-morph";
-import { trackCtaClick } from "~/lib/ferno";
 
 export const APP_URL = "https://app.applywithiris.com";
 const EXTENSION_URL =
@@ -92,7 +91,6 @@ export function Header() {
         </nav>
         <a
           href={APP_URL}
-          onClick={() => trackCtaClick("app")}
           className="inline-flex items-center border border-ink bg-ink py-2 pl-4 pr-2 text-xs font-bold uppercase tracking-[0.08em] text-white transition-colors hover:bg-purple-700"
         >
           Start applying <ActionArrow diagonal />
@@ -141,7 +139,6 @@ function Hero() {
             </p>
             <a
               href={APP_URL}
-              onClick={() => trackCtaClick("app")}
               className="inline-flex min-h-13 items-center border border-ink bg-ink py-3 pl-6 pr-3 text-sm font-black uppercase tracking-[0.08em] text-white transition-all hover:-translate-y-1 hover:bg-purple-700"
             >
               Apply with Iris <ActionArrow />
@@ -396,7 +393,6 @@ function Extension() {
           </ul>
           <a
             href={EXTENSION_URL}
-            onClick={() => trackCtaClick("extension")}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-8 inline-flex items-center border border-ink bg-purple-700 py-2.5 pl-5 pr-2 text-xs font-black uppercase tracking-[0.08em] text-white hover:bg-ink"
@@ -430,7 +426,6 @@ function FinalCta() {
           </p>
           <a
             href={APP_URL}
-            onClick={() => trackCtaClick("app")}
             className="inline-flex min-h-14 items-center border border-ink bg-ink py-3 pl-7 pr-3 text-sm font-black uppercase tracking-[0.08em] text-white hover:bg-purple-700"
           >
             Start applying <ActionArrow />
@@ -450,10 +445,10 @@ export function Footer() {
             <Logo className="h-10 w-auto brightness-0 invert" />
           </div>
           <div className="flex flex-wrap gap-x-7 gap-y-3 text-xs text-white/55">
-            <a href={APP_URL} onClick={() => trackCtaClick("app")} className="hover:text-white">
+            <a href={APP_URL} className="hover:text-white">
               App
             </a>
-            <a href={EXTENSION_URL} onClick={() => trackCtaClick("extension")} className="hover:text-white">
+            <a href={EXTENSION_URL} className="hover:text-white">
               Chrome extension
             </a>
             <a href="/privacy" className="hover:text-white">

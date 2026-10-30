@@ -1,6 +1,10 @@
 import { useEffect } from "react";
 import { Outlet, useLocation } from "react-router";
-import { initializeFerno, trackCanonicalPage } from "~/lib/ferno";
+import {
+  initializeFerno,
+  trackCanonicalPage,
+  trackMarketingLinks,
+} from "~/lib/ferno";
 
 export function FernoProvider() {
   const { pathname } = useLocation();
@@ -11,6 +15,7 @@ export function FernoProvider() {
 
   useEffect(() => {
     trackCanonicalPage(pathname);
+    trackMarketingLinks();
   }, [pathname]);
 
   return <Outlet />;
